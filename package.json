@@ -4,9 +4,14 @@
   "version": "2.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm --prefix frontend run dev",
+    "dev": "concurrently -k -n \"BACKEND,FRONTEND\" -c \"cyan.bold,magenta.bold\" \".\\.venv\\Scripts\\python.exe -c \\\"import sys, uvicorn; sys.path.insert(0, '.'); uvicorn.run('backend_v2.main:app', host='127.0.0.1', port=8000)\\\"\" \"npm --prefix frontend run dev\"",
+    "dev:backend": ".\\.venv\\Scripts\\python.exe -c \"import sys, uvicorn; sys.path.insert(0, '.'); uvicorn.run('backend_v2.main:app', host='127.0.0.1', port=8000)\"",
+    "dev:frontend": "npm --prefix frontend run dev",
     "build": "npm --prefix frontend run build",
-    "backend": ".\\.venv\\Scripts\\python.exe -m uvicorn backend_v2.main:app --host 127.0.0.1 --port 8000",
+    "test": ".\\.venv\\Scripts\\python.exe -m pytest -v backend_v2/tests",
     "start": "powershell -ExecutionPolicy Bypass -File ./run.ps1"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
   }
 }
