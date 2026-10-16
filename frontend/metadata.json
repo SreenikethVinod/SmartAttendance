@@ -1,0 +1,6 @@
+{
+  "name": "CVV Smart Facial Attendance System",
+  "description": "Chinmaya Vishwa Vidyapeeth Smart Attendance System with facial recognition, passive liveness detection, classroom Wi-Fi restriction, and 7-period faculty monitor.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

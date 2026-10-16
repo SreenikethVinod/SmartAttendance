@@ -1,0 +1,156 @@
+{
+  "buffalo_s": {
+    "variant": "buffalo_s",
+    "init_time_sec": 2.0397,
+    "peak_mem_mb": 136.97,
+    "images": [
+      {
+        "image": "image_T1.jpg",
+        "face_count": 1,
+        "avg_latency_ms": 461.98,
+        "embedding_dim": 512,
+        "embedding_norm": 21.3772,
+        "bbox": [
+          117.7,
+          109.6,
+          296.5,
+          351.3
+        ]
+      },
+      {
+        "image": "image_F1.jpg",
+        "face_count": 1,
+        "avg_latency_ms": 489.23,
+        "embedding_dim": 512,
+        "embedding_norm": 20.1748,
+        "bbox": [
+          192.1,
+          105.2,
+          385.3,
+          354.5
+        ]
+      },
+      {
+        "image": "image_F2.jpg",
+        "face_count": 1,
+        "avg_latency_ms": 448.39,
+        "embedding_dim": 512,
+        "embedding_norm": 23.3627,
+        "bbox": [
+          148.1,
+          193.4,
+          357.3,
+          507.3
+        ]
+      }
+    ],
+    "similarities": {
+      "image_T1.jpg vs image_T1.jpg": 1.0,
+      "image_T1.jpg vs image_F1.jpg": 0.0937,
+      "image_T1.jpg vs image_F2.jpg": 0.5074,
+      "image_F1.jpg vs image_F1.jpg": 1.0,
+      "image_F1.jpg vs image_F2.jpg": 0.0239,
+      "image_F2.jpg vs image_F2.jpg": 1.0
+    }
+  },
+  "buffalo_l": {
+    "variant": "buffalo_l",
+    "init_time_sec": 3.7025,
+    "peak_mem_mb": 166.33,
+    "images": [
+      {
+        "image": "image_T1.jpg",
+        "face_count": 1,
+        "avg_latency_ms": 1027.24,
+        "embedding_dim": 512,
+        "embedding_norm": 21.8833,
+        "bbox": [
+          116.8,
+          103.6,
+          293.6,
+          348.9
+        ]
+      },
+      {
+        "image": "image_F1.jpg",
+        "face_count": 1,
+        "avg_latency_ms": 929.35,
+        "embedding_dim": 512,
+        "embedding_norm": 20.9595,
+        "bbox": [
+          192.0,
+          101.5,
+          385.3,
+          355.3
+        ]
+      },
+      {
+        "image": "image_F2.jpg",
+        "face_count": 1,
+        "avg_latency_ms": 996.65,
+        "embedding_dim": 512,
+        "embedding_norm": 23.5344,
+        "bbox": [
+          145.6,
+          196.5,
+          356.3,
+          507.3
+        ]
+      }
+    ],
+    "similarities": {
+      "image_T1.jpg vs image_T1.jpg": 1.0,
+      "image_T1.jpg vs image_F1.jpg": 0.0323,
+      "image_T1.jpg vs image_F2.jpg": 0.5455,
+      "image_F1.jpg vs image_F1.jpg": 1.0,
+      "image_F1.jpg vs image_F2.jpg": 0.0613,
+      "image_F2.jpg vs image_F2.jpg": 1.0
+    }
+  },
+  "minifasnet_v2": {
+    "model_path": "backend_v2/models/MiniFASNetV2.onnx",
+    "init_time_sec": 0.0533,
+    "peak_mem_mb": 0.0,
+    "evaluations": [
+      {
+        "image": "image_T1.jpg",
+        "ground_truth": "Real",
+        "predicted_label": "Real",
+        "predicted_class_index": 1,
+        "real_probability": 1.0,
+        "class_probabilities": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "avg_latency_ms": 18.13
+      },
+      {
+        "image": "image_F1.jpg",
+        "ground_truth": "Fake",
+        "predicted_label": "Fake",
+        "predicted_class_index": 0,
+        "real_probability": 0.0087,
+        "class_probabilities": [
+          0.5561,
+          0.0087,
+          0.4352
+        ],
+        "avg_latency_ms": 19.69
+      },
+      {
+        "image": "image_F2.jpg",
+        "ground_truth": "Fake",
+        "predicted_label": "Fake",
+        "predicted_class_index": 2,
+        "real_probability": 0.0088,
+        "class_probabilities": [
+          0.0006,
+          0.0088,
+          0.9906
+        ],
+        "avg_latency_ms": 18.27
+      }
+    ]
+  }
+}
